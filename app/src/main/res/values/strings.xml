@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">capstone_1</string>
+    <string name="wellcome_title">Welcome to Dermacare</string>
+    <string name="wellcome_text">Find What Your Skin Needs Here</string>
+    <string name="email">email</string>
+    <string name="email_hint">Enter Your Email</string>
+    <string name="password">Password</string>
+    <string name="password_hint">Enter Your Password</string>
+    <string name="login">Login</string>
+    <string name="dont_have_account">Dont have account ?</string>
+    <string name="register">Register</string>
+    <string name="signup_title">Create Account \n With Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="name_hint">Enter Your Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_account">Already Have Account?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="dermaCare">DermaCare</string>
+    <string name="halo_user">Halo, User</string>
+    <string name="wellcome_to_dermacare">Wellcome To DermaCare</string>
+    <string name="diagnosa">Diagnosa</string>
+    <string name="ambil_gambar">Ambil Gambar</string>
+    <string name="artikel">Artikel</string>
+    <string name="judul_artikel">Judul Artikel</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus ex, commodo vel fermentum nec, aliquet nec augue. In interdum sem dui, eu vestibulum sem iaculis vel. Nam tempus lorem vel nibh varius, sed fringilla ipsum commodo. Nam vel mi dapibus, laoreet ligula a, accumsan urna. Nulla aliquet libero lectus, ac commodo risus vulputate vel...</string>
+    <string name="unggah_gambar">Unggah Gambar</string>
+    <string name="txt_title_upload">Apakah anda ingin mengunggah gambar ini?</string>
+    <string name="kembali">Kembali</string>
+    <string name="image_penyakit">image penyakit</string>
+    <string name="diagnosa_penyakit">Penyakit kulit yang anda derita merupakan Chain Worm</string>
+    <string name="title_penyakit">Apa itu Chain Worm ?</string>
+    <string name="rekomendasi_perawatan">Rekomendasi Perawatan</string>
+    <string name="contoh_judul">Lorem Ipsum</string>
+</resources>
