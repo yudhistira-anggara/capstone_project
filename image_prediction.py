@@ -3,9 +3,9 @@ from tensorflow.keras.preprocessing import image
 
 import numpy as np 
 
-class ImagePrediction:
-  model= tf.keras.models.load_model( "pass save model path here")
-  labels_path= "pass labels.txt path here"
+class PicturePrediction:
+  model= tf.keras.models.load_model( "/content/saved_model2")
+  labels_path= "/content/labels (4).txt"
   def __init__(self, image_path):
     self.image_path= image_path
 
@@ -20,8 +20,8 @@ class ImagePrediction:
     return np.array(open(self.labels_path).read().splitlines())
 
   def image_prediction(self):
-    image = self.load_image(self.image_path)
-    label = self.labels(labels_path)
+    image = self.load_image()
+    label = self.labels()
     prediction = self.model.predict(image)
     prediction_array = np.argmax(prediction)
 
