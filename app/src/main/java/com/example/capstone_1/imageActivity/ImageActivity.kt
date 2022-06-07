@@ -30,13 +30,20 @@ class ImageActivity : AppCompatActivity() {
     private fun getResult() {
         val myFile = intent.getSerializableExtra(picture) as File
         val isBackCamera = intent.getBooleanExtra(isBackCamera, true) as Boolean
+        val isGallery = intent.getBooleanExtra(isGallery,false)
 
-        val result = rotateBitmap(
-            BitmapFactory.decodeFile(myFile.path),
-            isBackCamera
-        )
+        if(!isGallery){
+            val result = rotateBitmap(
+                BitmapFactory.decodeFile(myFile.path),
+                isBackCamera
+            )
+            binding.imgPenyakit.setImageBitmap(result)
+        }else {
+            val result = BitmapFactory.decodeFile(myFile.path)
+            binding.imgPenyakit.setImageBitmap(result)
+        }
 
-        binding.imgPenyakit.setImageBitmap(result)
+
     }
 
     private fun setupAction() {
@@ -51,6 +58,7 @@ class ImageActivity : AppCompatActivity() {
     companion object {
         const val picture = "picture"
         const val isBackCamera = "isBackCamera"
+        const val isGallery = "isGallery"
     }
 
 }

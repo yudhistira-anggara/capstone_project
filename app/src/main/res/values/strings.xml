@@ -17,7 +17,7 @@
     <string name="already_have_account">Already Have Account?</string>
     <string name="sign_in">Sign In</string>
     <string name="dermaCare">DermaCare</string>
-    <string name="halo_user">Halo, User</string>
+    <string name="halo_user">Halo, {$firebaseUser.displayName.toString()}</string>
     <string name="wellcome_to_dermacare">Wellcome To DermaCare</string>
     <string name="diagnosa">Diagnosa</string>
     <string name="ambil_gambar">Ambil Gambar</string>

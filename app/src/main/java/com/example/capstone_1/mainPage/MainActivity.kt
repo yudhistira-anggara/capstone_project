@@ -1,6 +1,7 @@
 package com.example.capstone_1.mainPage
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.Intent.ACTION_GET_CONTENT
 import android.content.pm.PackageManager
@@ -16,12 +17,14 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.capstone_1.R
 import com.example.capstone_1.camera.CameraActivity
 import com.example.capstone_1.camera.uriToFile
 import com.example.capstone_1.databinding.ActivityMainBinding
 import com.example.capstone_1.imageActivity.ImageActivity
 import com.example.capstone_1.loginPage.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import java.io.File
@@ -31,6 +34,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
     private lateinit var auth: FirebaseAuth
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
@@ -53,6 +57,8 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
+        binding.txtHaloUser.text = "Halo , ${firebaseUser.displayName.toString()}"
+
         setupView()
         setupAction()
     }
@@ -69,6 +75,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         supportActionBar?.hide()
+
     }
 
     private fun setupAction() {
@@ -78,9 +85,11 @@ class MainActivity : AppCompatActivity() {
             btnCamera.setOnClickListener {
                 startCameraX()
             }
+
             btnUpload.setOnClickListener {
                 startGallery()
             }
+
             imgLogout.setOnClickListener {
                 logOut()
             }
@@ -115,6 +124,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity,ImageActivity::class.java)
 
             intent.putExtra("picture",myFile)
+            intent.putExtra("isGallery",true)
             startActivity(intent)
         }
     }
