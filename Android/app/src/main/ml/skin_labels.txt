@@ -1,0 +1,15 @@
+acne-cystic
+basal-cell-carcinoma-lesion
+dermatofibroma
+distal-subungual-onychomycosis
+eczema-fingertips
+eczema-hand
+eczema-nummular
+herpes-zoster
+lichen-planus
+perioral-dermatitis
+psoriasis
+rosacea
+seborrheic-keratoses-ruff
+seborrheic-keratosis-irritated
+stasis-dermatitis

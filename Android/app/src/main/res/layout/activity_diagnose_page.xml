@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diagnosePage.DiagnoseActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="50dp"
+        tools:src="@tools:sample/backgrounds/scenic"
+        android:contentDescription="@string/image_penyakit"/>
+
+    <TextView
+        android:id="@+id/txt_diagnosa_penyakit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="24dp"
+        android:text="@string/diagnosa_penyakit"
+        android:textSize="24sp"
+        android:fontFamily="@font/interbold"
+        android:gravity="center"
+        android:textColor="@color/black"/>
+
+    <com.example.capstone_1.customView.CustomButton
+        android:id="@+id/btn_rekomendasi_perawatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="24dp"
+        android:fontFamily="@font/interbold"
+        android:text="@string/cari_google"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_diagnosa_penyakit" />
+
+    <com.example.capstone_1.customView.CustomButton2
+        android:id="@+id/btn_kembali"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="24dp"
+        android:fontFamily="@font/interbold"
+        android:text="@string/kembali"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_rekomendasi_perawatan" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.capstone_1">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Capstone_1">
+        <activity
+            android:name=".articlePage.ArticleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".diagnosePage.DiagnoseActivity"
+            android:exported="true" />
+        <activity
+            android:name=".imageActivity.ImageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".signupPage.SignupActivity"
+            android:exported="true" />
+        <activity
+            android:name=".loginPage.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".camera.CameraActivity"
+            android:exported="true" />
+        <activity
+            android:name=".mainPage.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

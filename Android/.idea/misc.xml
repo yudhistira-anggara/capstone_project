@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/drawable/button_orange.xml" value="0.1705" />
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/drawable/ic_capture.xml" value="0.1" />
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/drawable/ic_switch_camera.xml" value="0.1" />
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/drawable/image_icon.xml" value="0.1705" />
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/drawable/lock_icon.xml" value="0.1705" />
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/drawable/logout_icon.xml" value="0.1705" />
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/drawable/profile_icon.xml" value="0.1705" />
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/drawable/setting_icon.xml" value="0.1705" />
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/layout/activity_article.xml" value="0.25416666666666665" />
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/layout/activity_camera.xml" value="0.12360688956433637" />
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/layout/activity_diagnose_page.xml" value="0.25416666666666665" />
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/layout/activity_image.xml" value="0.25416666666666665" />
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Bangkit/capstone_1/app/src/main/res/layout/item_artikel.xml" value="0.25416666666666665" />
+        <entry key="..\:/Bangkit/capstone_project/app/src/main/res/layout/activity_camera.xml" value="0.20923913043478262" />
+        <entry key="..\:/Bangkit/capstone_project/app/src/main/res/layout/activity_diagnose_page.xml" value="0.2" />
+        <entry key="..\:/Bangkit/capstone_project/app/src/main/res/layout/activity_image.xml" value="0.20923913043478262" />
+        <entry key="..\:/Bangkit/capstone_project/app/src/main/res/layout/activity_login.xml" value="0.264" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
