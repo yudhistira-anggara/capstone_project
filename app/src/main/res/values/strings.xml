@@ -24,16 +24,24 @@
     <string name="artikel">Artikel</string>
     <string name="judul_artikel">Judul Artikel</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus ex, commodo vel fermentum nec, aliquet nec augue. In interdum sem dui, eu vestibulum sem iaculis vel. Nam tempus lorem vel nibh varius, sed fringilla ipsum commodo. Nam vel mi dapibus, laoreet ligula a, accumsan urna. Nulla aliquet libero lectus, ac commodo risus vulputate vel...</string>
-    <string name="unggah_gambar">Unggah Gambar</string>
-    <string name="txt_title_upload">Apakah anda ingin mengunggah gambar ini?</string>
+
+    <string name="unggah_gambar">Unggah gambar</string>
+    <string name="proses_gambar">Proses gambar</string>
+    <string name="txt_title_upload">Apakah anda ingin memproses gambar ini?</string>
     <string name="kembali">Kembali</string>
     <string name="image_penyakit">image penyakit</string>
+
     <string name="diagnosa_penyakit">Penyakit kulit yang anda derita merupakan Chain Worm</string>
     <string name="title_penyakit">Apa itu Chain Worm ?</string>
     <string name="cari_google">Cari penyakit</string>
     <string name="contoh_judul">Lorem Ipsum</string>
+
     <string name="alert_title">Alert</string>
     <string name="alert_message">Apakah anda yakin ingin memproses gambar ? </string>
-    <string name="alert_button">yes</string>
+    <string name="alert_button">Ya</string>
+
+    <string name="alert_logoutVerification_title">Peringatan</string>
+    <string name="alert_logoutVerification_message">Apakah anda yakin ingin keluar ?</string>
+    <string name="alert_logoutVerification_button">Ya</string>
 
 </resources>

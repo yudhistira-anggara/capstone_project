@@ -33,7 +33,7 @@
         android:gravity="center"
         android:textColor="@color/black"/>
 
-    <com.example.capstone_1.customView.CustomButtonOrange
+    <com.example.capstone_1.customView.CustomButton
         android:id="@+id/btn_rekomendasi_perawatan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

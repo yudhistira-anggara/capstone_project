@@ -37,7 +37,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:text="@string/unggah_gambar"/>
+        android:text="@string/proses_gambar"/>
 
     <com.example.capstone_1.customView.CustomButton2
         android:id="@+id/btn_backToMain"

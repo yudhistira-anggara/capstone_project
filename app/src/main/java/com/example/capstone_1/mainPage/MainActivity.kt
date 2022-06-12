@@ -15,12 +15,14 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.capstone_1.R
 import com.example.capstone_1.camera.CameraActivity
 import com.example.capstone_1.camera.uriToFile
 import com.example.capstone_1.databinding.ActivityMainBinding
+import com.example.capstone_1.diagnosePage.DiagnoseActivity
 import com.example.capstone_1.imageActivity.ImageActivity
 import com.example.capstone_1.loginPage.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -33,6 +35,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
     private lateinit var auth: FirebaseAuth
+    private var alertDialog : AlertDialog? = null
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -110,9 +113,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun logOut(){
-        auth.signOut()
-        startActivity(Intent(this,LoginActivity::class.java))
-        finish()
+
+        if (alertDialog == null || !alertDialog?.isShowing!!){
+            alertDialog = AlertDialog.Builder(this).apply {
+                setTitle(context.getString(R.string.alert_logoutVerification_title))
+                setMessage(context.getString(R.string.alert_logoutVerification_message))
+                setPositiveButton(context.getString(R.string.alert_logoutVerification_button)) { p0, _ ->
+                    val intent = Intent(this@MainActivity, DiagnoseActivity::class.java)
+                    auth.signOut()
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                    p0?.dismiss()
+                    finish()
+                }
+            }.show()
+        }else{
+            alertDialog?.show()
+        }
     }
 
     private val launcherIntentGallery = registerForActivityResult(
