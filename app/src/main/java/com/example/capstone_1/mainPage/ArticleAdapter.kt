@@ -43,7 +43,7 @@ class ArticleAdapter: RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
-        holder.bind(articleList?.get(position)!!)
+        articleList?.get(position)?.let { holder.bind(it) }
     }
 
     override fun getItemCount(): Int {

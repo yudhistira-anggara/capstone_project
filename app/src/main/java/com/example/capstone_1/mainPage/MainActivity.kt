@@ -13,12 +13,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.capstone_1.R
 import com.example.capstone_1.camera.CameraActivity
 import com.example.capstone_1.camera.uriToFile
@@ -57,14 +59,15 @@ class MainActivity : AppCompatActivity() {
         auth = Firebase.auth
         val firebaseUser = auth.currentUser
 
-        if (firebaseUser == null) {
-            startActivity(Intent(this,LoginActivity::class.java))
-            finish()
-            return
-        }
+//        if (firebaseUser == null) {
+//            startActivity(Intent(this,LoginActivity::class.java))
+//            finish()
+//            return
+//        }
 
-        binding.txtHaloUser.text = "Halo , ${firebaseUser.displayName.toString()}"
+//        binding.txtHaloUser.text = "Halo , ${firebaseUser.displayName.toString()}"
 
+        setRecyclerView()
         setupViewModel()
 
         setupView()
@@ -180,6 +183,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupViewModel(){
         mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
+        mainViewModel.setArticle()
 
         mainViewModel.getArticle().observe(this){
             if (it != null){
@@ -187,6 +191,12 @@ class MainActivity : AppCompatActivity() {
                 adapter.notifyDataSetChanged()
             }
         }
+    }
+
+    private fun setRecyclerView(){
+        binding.rvArtikel.layoutManager = LinearLayoutManager(this)
+        adapter = ArticleAdapter()
+        binding.rvArtikel.adapter = adapter
     }
 
 
