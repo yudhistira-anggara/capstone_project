@@ -28,62 +28,35 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="24dp"
         android:text="@string/diagnosa_penyakit"
-        android:textSize="15sp"
+        android:textSize="24sp"
         android:fontFamily="@font/interbold"
         android:gravity="center"
         android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/txt_title_penyakit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_diagnosa_penyakit"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/title_penyakit"
-        android:fontFamily="@font/interregular"
-        android:textSize="14sp"
-        android:textColor="@color/black"/>
-    <TextView
-        android:id="@+id/penjelasan_penyakit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_title_penyakit"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="24dp"
-        android:text="@string/lorem_ipsum"
-        android:textSize="14sp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/intermedium"/>
 
     <com.example.capstone_1.customView.CustomButtonOrange
         android:id="@+id/btn_rekomendasi_perawatan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/penjelasan_penyakit"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="24dp"
         android:layout_marginRight="24dp"
-        android:text="@string/rekomendasi_perawatan"
-        android:fontFamily="@font/interbold"/>
+        android:fontFamily="@font/interbold"
+        android:text="@string/cari_google"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_diagnosa_penyakit" />
 
     <com.example.capstone_1.customView.CustomButton2
+        android:id="@+id/btn_kembali"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_rekomendasi_perawatan"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="24dp"
+        android:fontFamily="@font/interbold"
         android:text="@string/kembali"
-        android:fontFamily="@font/interbold"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_rekomendasi_perawatan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,7 +34,7 @@ class CustomButton : AppCompatButton {
         }
 
         setTextColor(txtColor)
-        textSize = 14f
+        textSize = 12f
         gravity = Gravity.CENTER
     }
 

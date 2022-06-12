@@ -46,7 +46,7 @@ class LoginActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
-        underlinedText()
+
         setupAction()
     }
 
@@ -56,11 +56,6 @@ class LoginActivity : AppCompatActivity() {
             signIn()
         }
     }
-
-    private fun underlinedText(){
-        binding.txtSignup.setPaintFlags(binding.txtSignup.getPaintFlags() or Paint.UNDERLINE_TEXT_FLAG)
-    }
-
 
     private fun signIn() {
         val signInIntent = googleSignInClient.signInIntent
