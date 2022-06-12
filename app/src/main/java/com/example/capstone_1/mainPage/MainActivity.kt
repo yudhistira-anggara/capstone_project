@@ -18,6 +18,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
 import com.example.capstone_1.R
 import com.example.capstone_1.camera.CameraActivity
 import com.example.capstone_1.camera.uriToFile
@@ -36,6 +37,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
     private lateinit var auth: FirebaseAuth
     private var alertDialog : AlertDialog? = null
+    private lateinit var mainViewModel : MainViewModel
+    private lateinit var adapter: ArticleAdapter
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,6 +64,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.txtHaloUser.text = "Halo , ${firebaseUser.displayName.toString()}"
+
+        setupViewModel()
 
         setupView()
         setupAction()
@@ -171,6 +176,17 @@ class MainActivity : AppCompatActivity() {
 
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
         ContextCompat.checkSelfPermission(baseContext,it) == PackageManager.PERMISSION_GRANTED
+    }
+
+    private fun setupViewModel(){
+        mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
+
+        mainViewModel.getArticle().observe(this){
+            if (it != null){
+                adapter.setArticleList(it)
+                adapter.notifyDataSetChanged()
+            }
+        }
     }
 
 
