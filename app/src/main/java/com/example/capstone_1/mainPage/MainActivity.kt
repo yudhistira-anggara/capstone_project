@@ -59,13 +59,13 @@ class MainActivity : AppCompatActivity() {
         auth = Firebase.auth
         val firebaseUser = auth.currentUser
 
-//        if (firebaseUser == null) {
-//            startActivity(Intent(this,LoginActivity::class.java))
-//            finish()
-//            return
-//        }
+        if (firebaseUser == null) {
+            startActivity(Intent(this,LoginActivity::class.java))
+            finish()
+            return
+        }
 
-//        binding.txtHaloUser.text = "Halo , ${firebaseUser.displayName.toString()}"
+        binding.txtHaloUser.text = "Halo , ${firebaseUser.displayName.toString()}"
 
         setRecyclerView()
         setupViewModel()
@@ -194,7 +194,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setRecyclerView(){
-        binding.rvArtikel.layoutManager = LinearLayoutManager(this)
+        binding.rvArtikel.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, true)
         adapter = ArticleAdapter()
         binding.rvArtikel.adapter = adapter
     }
