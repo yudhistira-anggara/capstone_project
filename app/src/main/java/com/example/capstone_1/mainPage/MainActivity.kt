@@ -91,9 +91,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.rvArtikel.setHasFixedSize(true)
 
-        val layoutManager = LinearLayoutManager(this)
-        binding.rvArtikel.layoutManager = layoutManager
-
     }
 
     private fun setupAction() {
@@ -202,7 +199,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setRecyclerView(){
-        binding.rvArtikel.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, true)
+        val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, true)
+        binding.rvArtikel.layoutManager = linearLayoutManager
+        linearLayoutManager.stackFromEnd = true
         adapter = ArticleAdapter()
         binding.rvArtikel.adapter = adapter
     }
