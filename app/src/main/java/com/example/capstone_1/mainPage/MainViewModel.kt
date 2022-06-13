@@ -1,5 +1,6 @@
 package com.example.capstone_1.mainPage
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.capstone_1.api.ApiConfig
@@ -22,6 +23,7 @@ class MainViewModel: ViewModel() {
                 ) {
                     if (response.isSuccessful) {
                         listArticle.postValue(response.body()?.article)
+                        Log.d("awikwok","${response.body()}")
                     } else {
                         listArticle.postValue(null)
                     }

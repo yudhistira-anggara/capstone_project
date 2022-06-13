@@ -1,8 +1,10 @@
 package com.example.capstone_1.mainPage
 
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.capstone_1.api.ArticleItem
@@ -21,14 +23,12 @@ class ArticleAdapter: RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() {
         fun bind(data: ArticleItem){
 
             itemView.setOnClickListener{
-                val intent = Intent(itemView.context, ArticleActivity::class.java)
-                intent.putExtra("article", data)
-
+                itemView.context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(data.source)))
             }
 
             binding.apply {
-                titleArtikel.text = data.title
-                txtArtikel.text = data.source
+
+                txtArtikel.text = data.title
 
                 Glide.with(itemView)
                     .load(data.thumbnail)

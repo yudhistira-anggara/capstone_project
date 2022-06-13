@@ -46,7 +46,6 @@ class LoginActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
-
         setupAction()
     }
 

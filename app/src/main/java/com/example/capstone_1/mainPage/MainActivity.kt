@@ -11,6 +11,7 @@ import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.LinearLayout
@@ -67,8 +68,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.txtHaloUser.text = "Halo , ${firebaseUser.displayName.toString()}"
 
-        setRecyclerView()
+
         setupViewModel()
+        setRecyclerView()
 
         setupView()
         setupAction()
@@ -86,6 +88,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         supportActionBar?.hide()
+
+        binding.rvArtikel.setHasFixedSize(true)
+
+        val layoutManager = LinearLayoutManager(this)
+        binding.rvArtikel.layoutManager = layoutManager
 
     }
 
@@ -190,6 +197,7 @@ class MainActivity : AppCompatActivity() {
                 adapter.setArticleList(it)
                 adapter.notifyDataSetChanged()
             }
+            Log.d("awikwok","$adapter")
         }
     }
 
